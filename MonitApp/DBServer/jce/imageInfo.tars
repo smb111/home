@@ -1,0 +1,19 @@
+/**
+ * 这个文件是 Common 文件底下的， 基础的数据结构 ===== 图像存储的数据结构
+ */
+
+module MonitApp
+{
+	// 图片的类型
+	enum ImageType
+	{
+		PNG,
+		JPEG
+	};
+	// 图片的信息结构体
+	struct ImageInfo
+	{
+		0 require 	string 		content;	// 图片的 buffer 这里为了传输和内存的方便管理，使用了 std::string 类型
+		1 optional  ImageType	imageType;  
+	};
+};

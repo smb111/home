@@ -1,0 +1,15 @@
+#include "/home/tarsproto/MonitApp/StructDataGetServer/StructDataGet.tars" 
+
+module MonitApp
+{
+
+interface DataBase
+{
+    int test();
+	/**
+	  * 数据库 获取 符合条件的 图像数据
+	  */
+	int getDBImage(GetImageListReq req, out GetImageListRsp resp); 
+};
+
+}; 

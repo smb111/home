@@ -8,12 +8,8 @@
 *.d
 *.o
 *.tgz
-DBServer
-StructDataGetServer
-CacheServer
 *.swp
 *.so
 *.a
 DataBaseClient
 GetImageClient
-

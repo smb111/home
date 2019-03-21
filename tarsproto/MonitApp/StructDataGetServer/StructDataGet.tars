@@ -1,0 +1,31 @@
+#include "/home/tarsjce/MonitApp/tarsCommon/imageInfo.tars"
+
+module MonitApp
+{
+/**
+ * 从数据库请求 图像的 请求结构体
+ */
+struct GetImageListReq
+{
+    0 require   string      dateStart;
+    1 require   string      dateEnd;
+    2 optional  int         idStart;
+	3 optional  int         idEnd;
+};
+
+/**
+ * 服务接口返回给 调用者 的图像信息结构体
+ */
+struct GetImageListRsp
+{
+	0 require   vector<ImageInfo>   images;  // 返回符合查询条件的 图像信息结构体的集合
+};
+
+
+interface StructDataGet
+{
+    int test();
+	int getImage(GetImageListReq req, out GetImageListRsp resp);  // 数据库查询 符合条件的图像列表
+};
+
+}; 

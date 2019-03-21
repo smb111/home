@@ -1,0 +1,15 @@
+
+module MonitApp
+{
+
+interface Cache
+{
+    int test();
+
+	/**
+	 *	Cache 服务，这个项目的 Cache 服务准备使用 Redis 来进行编写，这个地方先写一个接口， 以后有具体的业务需求再添加
+	 */
+	int getPermission(string name, out bool permission);
+};
+
+}; 

@@ -1,0 +1,12 @@
+#include "/home/tarsproto/MonitApp/StructDataGetServer/StructDataGet.tars" 
+
+module MonitApp
+{
+
+interface DataBase
+{
+    int test();
+	int getDBImage(GetImageListReq req, out GetImageListRsp resp); 
+};
+
+}; 
